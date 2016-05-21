@@ -35,12 +35,24 @@ function getStatus(server, callback) {
     return callback(error);
   }
 
-  return request(server.url, (err, res, body) => {
+  const options = {};
+
+  if (server.username && server.password) {
+    options.auth = {
+      user: server.username,
+      pass: server.password,
+      sendImmediately: false,   // wait for 401 response from server before sending username and password
+    };
+  }
+
+  return request(server.url, options, (err, res, body) => {
     let error = null;
 
     if (err) {
       error = err;
-      error.status = res.statusCode;
+      if (res) {
+        error.status = res.statusCode;
+      }
     } else if (res.statusCode !== 200) {
       const message = `Error: server responded with body: ${JSON.stringify(body)}`;
       error = new Error(message);
