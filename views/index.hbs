@@ -1,0 +1,23 @@
+<div>
+  {{#each results}}
+    {{#unless @first}}
+      <hr>
+    {{/unless}}
+
+    <div>
+      Name: {{name}}
+    </div>
+
+    <div>
+      URL: {{url}}
+    </div>
+
+    <div>
+      <pre>{{{filesystem}}}</pre>
+    </div>
+
+    <div>
+      <pre>{{{app}}}</pre>
+    </div>
+  {{/each}}
+</div>

@@ -1,0 +1,16 @@
+{
+  "servers": [
+    {
+      "name": "test",
+      "url": "http://localhost:3000"
+    },
+    {
+      "name": "test2",
+      "url": "http://localhost:3000"
+    },
+    {
+      "name": "test3",
+      "url": "http://localhost:3000"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "server-status-page",
+  "version": "1.0.0",
+  "description": "A web page that show the status of servers",
+  "scripts": {
+    "start": "./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeb Schiefer",
+  "license": "MIT",
+  "repository": "https://github.com/jebschiefer/server-status-page",
+  "devDependencies": {
+    "eslint": "2.10.2",
+    "eslint-config-airbnb-base": "3.0.1",
+    "eslint-plugin-import": "1.8.0"
+  },
+  "dependencies": {
+    "async": "2.0.0-rc.5",
+    "express": "4.13.4",
+    "express-handlebars": "3.0.0",
+    "morgan": "1.7.0",
+    "request": "2.72.0"
+  }
+}
